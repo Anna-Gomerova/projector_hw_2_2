@@ -2,29 +2,6 @@ body {
     font-family: 'Montserrat';
     font-size: 20px;
     margin: 0px;
-    overflow-x: hidden;
-}
-
-.fake-bg {
-    position: relative;
-}
-
-.fake-bg:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80%;
-    background-image: url(./HW2.2_img/bg.jpg);
-    background-repeat: no-repeat;
-    z-index: -1;
-    background-size: cover;
-}
-
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
 }
 
 h1 {
@@ -32,20 +9,9 @@ h1 {
     font-weight: 400;
     font-family: 'Quattrocento';
     font-size: 96px;
-    /* color: white; */
-    line-height: 100px;
     text-align: center;
+    line-height: 100px;
     margin: 75px 0px;
-    position: relative;
-}
-
-.pre_header {
-    margin: 0;
-    font-size: 16px;
-    line-height: 24px;
-    /* color: white; */
-    opacity: 0.9;
-    position: absolute;
 }
 
 h2 {
@@ -61,7 +27,6 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 40px 48px;
-    /* color: white; */
     text-align: center;
 }
 
@@ -69,19 +34,19 @@ nav li {
     list-style-type: none;
     display: inline-block;
     margin: 0px 24px;
-  }
-  
-  
+}
+
+
 nav li:first-child {
     float: left;
     margin: 0px;
-  }
-  
+}
+
 nav li:last-child {
     float: right;
     margin: 0px;
-  }
-  
+}
+
 nav li::after {
     content: "";
     display: block;
@@ -89,16 +54,15 @@ nav li::after {
     height: 3px;
     background: transparent;
     background-position: center;
-  }
-  
+}
+
 nav li:hover::after {
-    background-image: url(./HW1.3_img/_.svg);
+    background-image: url(./HW2.2_img/_.svg);
     background-repeat: no-repeat;
-  }
+}
 
 nav a {
     text-decoration: none;
-    /* color: white; */
     display: inline-block;
     font-weight: 400;
     font-size: 16px;
@@ -108,29 +72,82 @@ nav a {
     padding: 0 12px 11px;
 }
 
+
+
+.bacground_main {
+    position: relative;
+}
+
+.bacground_main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./HW2.2_img/bg.jpg);
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-size: cover;
+
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0px auto;
+}
+
 .intro h2 {
-    /* color: white; */
     opacity: 0.9;
-    padding-left: 740px;
+    padding-left: 51.7%;
+    /* розрахунок padding-left: 605px/1170px*/
 }
 
-.intro img{
+.intro img {
+    position: relative;
     display: block;
-    margin: -179px auto 0px;
+    margin: 75px auto;
+    z-index: 2;
 }
 
-.menu a, .intro {
+.menu a,
+.intro {
     color: white;
 }
 
+.intro {
+    position: relative;
+}
+
+
+
+#intro_text {
+    width: 81.25%;
+    margin: 0 auto;
+}
+
+#pre_header {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.9;
+    top: 181px;
+    padding-top: 62px;
+}
+
 #intro_decoration {
+    overflow: hidden;
     font-family: 'Quattrocento';
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    width: 300%;
     color: #71870E;
-    margin: 230px 0px 0px 0px;
-    
+    margin: -276px 0px 0px 0px;
+    padding-bottom: 75px;
+    white-space: nowrap;
+    transform: translateX(-50%);
 }
 
 #about {
